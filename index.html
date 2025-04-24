@@ -6,43 +6,61 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
   <link rel="stylesheet" href="./styles/styles.css">
-  <title>Frontend Mentor | Componente de resumen de resultados</title>
+  <title>Frontend Mentor | Componente de score-card de result-cardados</title>
 </head>
 <body>
 
-  <main>
-    <section class="result">
-      <h4 class="result__title">Tu resultado</h4>
-      <p class="result__number">76</p>
-      <p class="result__state">Excelente</p>
-      <p class="result__details">Obtuviste una puntuación superior al 65% de las personas que realizaron estos exámenes.</p>
+  <main class="main">
+    <section class="result-card">
+      <h4 class="result-card__title transparent">Tu resultado</h4>
+      <div class="result-card__score">
+        <p>76</p>
+        <p class="transparent--2">at 100</p>
+      </div>
+      <p class="result-card__state">Excelente</p>
+      <p class="result-card__details transparent">Obtuviste una puntuación superior al 65% de las personas que realizaron estos exámenes.</p>
     </section>
 
-    <section class="resumen">
-      <h4 class="resumen__title">Resumen</h4>
-      <article class="resumen__reaction">
-        <p>Reaction</p>
-        <p>80 / 100</p>
-      </article>
-      <article class="resumen__memory">
-        <p>Memoria</p>
-        <p>92 / 100</p>
-      </article>
-      <article class="resumen__verbal">
-        <p>Verbal</p>
-        <p>61 / 100</p>
-      </article>
-      <article class="resumen__visual">
-        <p>Visual</p>
-        <p>72 / 100</p>
+    <section class="score-card">
+      <h4 class="score-card__title">Resumen</h4>
+
+      <article class="score-card__item score-card__reaction">
+        
+        <div class="score-card__icon">
+          <div class="score-card__icon__reaction"></div>
+          <p class="score-card__label">Reaction</p>
+        </div>
+        <p class="score-card__score"> <span>80</span> / 100</p>
+
       </article>
 
-      <button>Continuar</button>
+      <article class="score-card__item  score-card__memory">
+        <div class="score-card__icon">
+          <div class="score-card__icon__memory"></div>
+          <p class="score-card__label">Memoria</p>
+        </div>
+        <p class="score-card__score"> <span>92</span> / 100</p>
+      </article>
+
+      <article class="score-card__item score-card__verbal">
+        <div class="score-card__icon">
+          <div class="score-card__icon__verbal"></div>
+          <p class="score-card__label">Verbal</p>
+        </div>
+        <p class="score-card__score"><span>61</span> / 100</p>
+      </article>
+
+      <article class="score-card__item score-card__visual">
+        <div class="score-card__icon">
+          <div class="score-card__icon__visual"></div>
+          <p class="score-card__label">Visual</p>
+        </div>
+        <p class="score-card__score"><span>72</span> / 100</p>
+      </article>
+
+      <button class="score-card__buttom">Continuar</button>
     </section>
 
   </main>
-
-  
-
 </body>
 </html>

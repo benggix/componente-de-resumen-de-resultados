@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
 :root {
   /*Colores primario*/
   --Lightred: hsl(0, 100%, 67%);
@@ -23,11 +24,202 @@
   /*Usa la transparencia para obtener las variaciones de color necesarias para que coincidan con el diseño. Consejo: considera usar `hsla()`.*/
 }
 
-body {
-  font-size: 18px
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-h4 {
+body {
+  font-size: 18px;
+  background-color: var(--Paleblue);
+  background-color: gray;
   font-family: "Hanken Grotesk", sans-serif;
+  
+}
 
+.main {
+  width: clamp(300px, 100vw, 43%);
+  height: clamp(300px, 100vh ,580px);
+  background-color: var(--White);
+  background-color: blanchedalmond;
+  border-radius: 2em;
+  margin: 40vh auto;
+  display: flex;
+  box-shadow: 
+    25px -10px 40px 5px hsla(241, 72%, 46%, 0.052),
+    0px 20px 80px -20px hsla(241, 72%, 46%, .1);
+}
+
+.result-card {
+  background-color: var(--Lightroyalblue);
+  border-radius: 2em;
+  width: 50%;
+  text-align: center;
+  padding: 2em 1em;
+  color: var(--White);
+}
+
+
+.result-card__score {
+  height: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto 3em;
+}
+
+.result-card__title {
+  font-size: calc(1vw + .3rem);
+  margin-bottom: 1.4em;
+}
+
+.result-card__score :first-child {
+  font-size: calc(4vw + .3rem);
+  font-weight: 700;
+}
+
+.result-card__number {
+  font-size: 4.5rem;
+  
+  font-weight: 700;
+}
+
+.result-card__state {
+  font-size: calc(1.45vw + .3rem);
+  font-weight: 500;
+}
+
+.result-card__details {
+  font-size: calc(.68vw + .3rem);
+  width: 76%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 1em;
+
+}
+
+.transparent {
+  opacity: .7;
+}
+.transparent--2 {
+  opacity: .5;
+}
+
+
+.score-card {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.score-card__title {
+  width: 80%;
+  font-size: calc(1.06vw + .3rem);
+  margin-bottom: -1.5em;
+}
+
+.score-card__icon {
+  display: flex;
+  align-items: center;  
+  column-gap: 1em;
+}
+
+.score-card__icon__reaction {
+  background-image: url("../assets/images/icon-reaction.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: clamp(.2em, 1.5vw, 1.2em);
+  height: clamp(.2em, 1.5vw, 1.2em);
+  
+}
+
+.score-card__item {
+  width: 80%;
+  height: 9%;
+  border-radius: .7em;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: -2em;
+  padding: 0 1em;
+  gap: .5em;
+}
+
+.score-card__reaction {
+  background-color: hsl(0, 100%, 67%, .07);
+  color: var(--Lightred);
+}
+
+.score-card__score {
+  color: hsl(224, 30%, 27%, .5);
+  font-size: clamp(.5rem, .9vw ,1rem);
+
+}
+
+.score-card__score > span{
+  color: var(--Darkgrayblue);
+  font-weight: 800;
+}
+
+.score-card__memory {
+  color: var(--Orangeyyellow);
+  background-color: hsl(39, 100%, 56%, .07);;
+}
+
+.score-card__icon__memory {
+  background-image: url("../assets/images/icon-memory.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: clamp(.2em, 1.5vw, 1.2em);
+  height: clamp(.2em, 1.5vw, 1.2em);
+  
+}
+
+.score-card__verbal {
+  color: var(--Greenteal);
+  background-color: hsl(166, 100%, 37%, .07);
+}
+
+.score-card__icon__verbal {
+  background-image: url("../assets/images/icon-verbal.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: clamp(.2em, 1.5vw, 1.2em);
+  height: clamp(.2em, 1.5vw, 1.2em);
+}
+
+
+.score-card__visual {
+  color: var(--Cobaltblue);
+  background-color: hsl(234, 85%, 45%, .07);
+}
+
+.score-card__icon__visual {
+  background-image: url("../assets/images/icon-visual.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: clamp(.2em, 2vw, 1.2em);
+  height: clamp(.2em, 2vw, 1.2em);
+}
+
+.score-card__label {
+  font-size: clamp(.5rem, 1vw ,1.2rem);
+}
+
+.score-card__buttom {
+  display: block;
+  margin: 0 auto;
+  padding: 1.1em;
+  width: 80%;
+  border-radius: 2em;
+  font-size: 1.1rem;
+  background-color: var(--Darkgrayblue);
+  color: var(--White);
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 500;
+  margin: .5em 0;
 }
