@@ -33,21 +33,18 @@
 body {
   font-size: 18px;
   background-color: var(--Paleblue);
-  background-color: gray;
   font-family: "Hanken Grotesk", sans-serif;
-  
 }
 
 .main {
-  width: clamp(300px, 100vw, 43%);
+  width: clamp(300px, 100vw, 45%);
   height: clamp(300px, 100vh ,580px);
   background-color: var(--White);
-  background-color: blanchedalmond;
   border-radius: 2em;
   margin: 40vh auto;
   display: flex;
   box-shadow: 
-    25px -10px 40px 5px hsla(241, 72%, 46%, 0.052),
+    25px -10px 40px 5px hsla(241, 72%, 46%, 0.052)
     0px 20px 80px -20px hsla(241, 72%, 46%, .1);
 }
 
@@ -60,28 +57,29 @@ body {
   color: var(--White);
 }
 
+.result-card__title {
+  font-size: calc(1vw + .4rem); 
+}
 
 .result-card__score {
-  height: 45%;
+  height: 40%; /**/
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 0 auto 3em;
+  margin: 3em auto 3em;
 }
 
-.result-card__title {
-  font-size: calc(1vw + .3rem);
-  margin-bottom: 1.4em;
-}
 
 .result-card__score :first-child {
   font-size: calc(4vw + .3rem);
   font-weight: 700;
 }
+.result-card__score :first-child + p {
+  font-size: calc(.5vw + .4rem);
+}
 
 .result-card__number {
   font-size: 4.5rem;
-  
   font-weight: 700;
 }
 
@@ -108,6 +106,7 @@ body {
 
 
 .score-card {
+  padding: 2em 1em;
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -116,16 +115,46 @@ body {
 }
 
 .score-card__title {
-  width: 80%;
-  font-size: calc(1.06vw + .3rem);
-  margin-bottom: -1.5em;
+  width: 85%;
+  font-size: calc(1vw + .4rem); 
+  margin-bottom: -2.5em;
 }
+
+.all-card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+
+.score-card__item {
+  width: clamp(100px, 85%, 100vw);
+  height: 13%;
+  border-radius: .7em;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 clamp(1px, 1vw, 60px );
+  
+}
+
+.score-card__reaction {
+  background-color: hsl(0, 100%, 67%, .07);
+  color: var(--Lightred);
+}
+
+
 
 .score-card__icon {
   display: flex;
   align-items: center;  
-  column-gap: 1em;
+  column-gap: clamp(.4em, 1vw, 1em);
 }
+
 
 .score-card__icon__reaction {
   background-image: url("../assets/images/icon-reaction.svg");
@@ -136,31 +165,18 @@ body {
   
 }
 
-.score-card__item {
-  width: 80%;
-  height: 9%;
-  border-radius: .7em;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: -2em;
-  padding: 0 1em;
-  gap: .5em;
-}
 
-.score-card__reaction {
-  background-color: hsl(0, 100%, 67%, .07);
-  color: var(--Lightred);
-}
+
+
 
 .score-card__score {
+  display: inline-block;
   color: hsl(224, 30%, 27%, .5);
   font-size: clamp(.5rem, .9vw ,1rem);
-
 }
 
 .score-card__score > span{
+  display: inline-block;
   color: var(--Darkgrayblue);
   font-weight: 800;
 }
@@ -212,14 +228,178 @@ body {
 
 .score-card__buttom {
   display: block;
-  margin: 0 auto;
   padding: 1.1em;
   width: 80%;
   border-radius: 2em;
-  font-size: 1.1rem;
+  font-size: clamp(10px, 1vw, 1.1rem);
   background-color: var(--Darkgrayblue);
   color: var(--White);
   font-family: "Hanken Grotesk", sans-serif;
   font-weight: 500;
-  margin: .5em 0;
+  margin-top: -3.5em;
+}
+
+@media (max-width: 768px) {
+
+  /*CARD - RESULT*/
+  .main {
+    width: 100vw;
+    height: 100dvh;
+    flex-direction: column;
+    margin: 0;    
+    border-radius: 0;
+  }
+
+  .result-card {
+    width: 100%;
+    border-radius: 0 0 2em 2em;
+    padding: 2em 1em 2.5em;
+    box-shadow: 0px 10px 70px hsl(241, 81%, 54%, .17);
+  }
+
+
+  .result-card__title {
+    font-size: calc(3vw + .4rem); 
+  }
+
+  .result-card__score {
+    height: 35%; /**/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 2em auto 3em;
+  }
+
+  .result-card__score :first-child {
+    font-size: calc(4vw + 3rem);
+    font-weight: 700;
+  }
+  .result-card__score :first-child + p {
+    font-size: calc(2vw + .6rem);
+  }
+
+  .result-card__state {
+    font-size: calc(4vw + .5rem);
+  }
+
+  .result-card__details {
+    font-size: calc(1vw + .8rem);
+    margin-top: .5em;
+  }
+
+  /*CARD - SCORE*/
+
+  .score-card {
+    width: 100%;
+    height: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .score-card__title {
+    font-size: calc(3vw + .3rem); 
+    margin-bottom: calc(3vw - .1em);
+  }
+  
+  .all-card {
+    width: 100%;
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .score-card__item {
+    width: clamp(100px, 90vw, 90%);
+    height: clamp(50px, 12vw, 90% );
+    padding: 0 clamp(1px, 3vw, 60px);
+    
+  }
+  
+  .score-card__reaction {
+    background-color: hsl(0, 100%, 67%, .07);
+    color: var(--Lightred);
+  }
+  
+  
+  
+  .score-card__icon {
+    display: flex;
+    align-items: center;  
+    column-gap: clamp(.4em, 3vw, 1em);
+  }
+  
+  
+  .score-card__icon__reaction {
+    width: clamp(.2em, 6vw, 4em);
+    height: clamp(.2em, 6vw, 4em);
+    
+  }
+
+  
+  .score-card__score {
+    display: inline-block;
+    color: hsl(224, 30%, 27%, .5);
+    font-size: clamp(.5rem, 4vw ,3rem);
+  }
+  
+  .score-card__score > span{
+    display: inline-block;
+    color: var(--Darkgrayblue);
+    font-weight: 800;
+  }
+  
+  .score-card__memory {
+    color: var(--Orangeyyellow);
+    background-color: hsl(39, 100%, 56%, .07);;
+  }
+  
+  .score-card__icon__memory {
+    width: clamp(.2em, 6vw, 4em);
+    height: clamp(.2em, 6vw, 4em);
+    
+  }
+  
+  .score-card__verbal {
+    color: var(--Greenteal);
+    background-color: hsl(166, 100%, 37%, .07);
+  }
+  
+  .score-card__icon__verbal {
+    width: clamp(.2em, 6vw, 4em);
+    height: clamp(.2em, 6vw, 4em);
+  }
+  
+  
+  .score-card__visual {
+    color: var(--Cobaltblue);
+    background-color: hsl(234, 85%, 45%, .07);
+  }
+  
+  .score-card__icon__visual {
+    width: clamp(.2em, 6vw, 4em);
+    height: clamp(.2em, 6vw, 4em);
+  }
+  
+  .score-card__label {
+    font-size: clamp(.5rem, 3.5vw ,3rem);
+  }
+  
+  .score-card__buttom {
+    display: block;
+    padding: clamp(.2em, 4vw, .8em);
+    border-radius: 2em;
+    font-size: clamp(.5rem, 4vw ,3rem);
+    background-color: var(--Darkgrayblue);
+    color: var(--White);
+    font-family: "Hanken Grotesk", sans-serif;
+    font-weight: 500;
+    margin-top: calc(1vw + 1em);
+    margin-bottom: calc(1vw + .7em);;
+  }
+
+
 }
