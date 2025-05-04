@@ -1,5 +1,5 @@
 
-# 🍴Página de componente de resumen de resultados
+# 🔵 Página de componente de resumen de resultados
 
 Bienvenido a esta pagina web donde podras ver un componente de resumen de resultados
 
